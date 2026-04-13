@@ -5,7 +5,7 @@ Collection of 3DGS renderer
 
 - ✅ CUDA
 - ✅ Differentiable
-- ❌ Depth
+- ✅ Depth
 - ❌ Alpha
 - ❌ Extrinsics Gradient
 - ❌ Batch Rendering
