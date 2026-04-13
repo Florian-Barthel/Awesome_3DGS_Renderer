@@ -253,7 +253,7 @@ rendered_image, rendered_depth, rendered_norm, rendered_alpha, radii, extra = ra
 
 ## 2DGS
 
-Repo: https://github.com/hbb1/diff-surfel-rasterization/tree/e0ed0207b3e0669960cfad70852200a4a5847f61
+Repo: https://github.com/hbb1/diff-surfel-rasterization/tree/main
 
 <details>
 <summary>Installation</summary>
