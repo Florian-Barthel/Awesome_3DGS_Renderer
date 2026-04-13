@@ -94,5 +94,6 @@ render_colors, render_alphas, info = rasterization(
     Ks=Ks,                                    # [B, 3, 3]
     width=width,
     height=height,
+    render_mode: "RGB",                       # ["RGB", "D", "ED", "RGB+D", "RGB+ED"]
 )
 ```
