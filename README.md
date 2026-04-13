@@ -17,11 +17,6 @@ Collection of differentiable 3DGS CUDA renderer with simple installation and usa
 | Renderer | Inference Speed | Training Speed |
 |---|---|---|
 | Inria 3DGS     | tbd | tbd |
-| Faster-GS      | tbd | tbd |
-| ashawkey       | tbd | tbd |
-| Improved DiffRast | tbd | tbd |
-| gsplat         | tbd | tbd |
-| slothfulxtx    | tbd | tbd |
 
 
 ## Inria 3DGS
