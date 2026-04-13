@@ -1,4 +1,4 @@
-# Awesome_3DGS_Renderer
+# Awesome 3DGS Renderer
 Collection of 3DGS renderer
 
 ## Inria 3DGS
@@ -35,7 +35,10 @@ Training Speed:tdb
 
 Repo: https://github.com/fhahlbohm/gaussian-splatting
 
-Installation: `pip install git+https://github.com/nerficg-project/faster-gaussian-splatting/#subdirectory=FasterGSCudaBackend --no-build-isolation`
+Installation: 
+```
+pip install git+https://github.com/nerficg-project/faster-gaussian-splatting/#subdirectory=FasterGSCudaBackend --no-build-isolation
+```
 
 ## ashawkey
 
@@ -57,7 +60,7 @@ git clone --recursive https://github.com/ashawkey/diff-gaussian-rasterization.gi
 pip install diff-gaussian-rasterization --no-build-isolation
 ```
 
-## gsplpat
+## gsplat
 
 - ✅ CUDA
 - ✅ Differentiable
@@ -76,3 +79,20 @@ Installation:
 pip install gsplat
 ```
 
+Usage:
+
+```py
+from gsplat.rendering import rasterization
+
+render_colors, render_alphas, info = rasterization(
+    means=means,                              # [B, N, 3]
+    quats=quats,                              # [B, N, 4]
+    scales=scales,                            # [B, N, 3]
+    opacities=opacities,                      # [B, N]
+    colors=colors,                            # [B, N, C, D]
+    viewmats=torch.linalg.inv(camtoworlds),   # [B, 4, 4]
+    Ks=Ks,                                    # [B, 3, 3]
+    width=width,
+    height=height,
+)
+```
