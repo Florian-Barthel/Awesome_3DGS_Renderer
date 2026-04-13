@@ -9,6 +9,7 @@ Collection of differentiable 3DGS CUDA renderer with simple installation and usa
 | Improved DiffRast  | ✅ | ✅ | ❌ | ❌ | ❌ |
 | gsplat             | ✅ | ✅ | ❌ | ✅ | ✅ |
 | slothfulxtx        | ✅ | ✅ | ✅ | ❌ | ❌ |
+| 2DGS               | ✅ | ❌ | ❌ | ❌ | ❌ |
 
 
 
@@ -248,3 +249,19 @@ rendered_image, rendered_depth, rendered_norm, rendered_alpha, radii, extra = ra
 )
 ```
 </details>
+
+
+## 2DGS
+
+Repo: https://github.com/hbb1/diff-surfel-rasterization/tree/e0ed0207b3e0669960cfad70852200a4a5847f61
+
+<details>
+<summary>Installation</summary>
+    
+```
+git clone https://github.com/hbb1/diff-surfel-rasterization.git --recursive
+cd diff-surfel-tracing
+pip install .
+```
+</details>
+
