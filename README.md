@@ -1,13 +1,13 @@
 # Awesome 3DGS Renderer
-Collection of 3DGS renderer with simple installation and usage examples.
+Collection of differentiable 3DGS CUDA renderer with simple installation and usage examples.
 
 Overview:
-| Renderer | Backend | Differentiable | Depth | Alpha | Extrinsics Gradient | Batch Rendering |
+| Renderer | Depth | Alpha | Extrinsics Gradient | Batch Rendering |
 |---|---|---|---|---|---|---|
-| Inria 3DGS | CUDA | ✅ | ✅ | ❌ | ❌ | ❌ |
-| Faster-GS  | CUDA | ✅ | ❌ | ❌ | ❌ | ❌ |
-| ashawkey   | CUDA | ✅ | ✅ | ✅ | ❌ | ❌ |
-| gsplat     | CUDA | ✅ | ✅ | ✅ | ✅ | ✅ |
+| Inria 3DGS | ✅ | ❌ | ❌ | ❌ |
+| Faster-GS  | ❌ | ❌ | ❌ | ❌ |
+| ashawkey   | ✅ | ✅ | ❌ | ❌ |
+| gsplat     | ✅ | ✅ | ✅ | ✅ |
 
 
 
