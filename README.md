@@ -1,5 +1,5 @@
 # Awesome 3DGS Renderer
-Collection of 3DGS renderer
+Collection of 3DGS renderer with simple installation and usage examples.
 
 ## Inria 3DGS
 
