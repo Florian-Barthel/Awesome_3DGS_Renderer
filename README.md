@@ -3,15 +3,15 @@ Collection of differentiable 3DGS CUDA renderer with simple installation and usa
 
 | Renderer | Depth | Alpha | Normal | Cam Extrinsics Grad | Batch Rendering |
 |---|---|---|---|---|---|
-| Inria 3DGS         | ✅ | ❌ | ❌ | ❌ | ❌ |
-| Faster-GS          | ❌ | ❌ | ❌ | ❌ | ❌ |
-| ashawkey           | ✅ | ✅ | ❌ | ❌ | ❌ |
-| Improved DiffRast  | ✅ | ✅ | ❌ | ❌ | ❌ |
-| gsplat             | ✅ | ✅ | ❌ | ✅ | ✅ |
-| slothfulxtx        | ✅ | ✅ | ✅ | ❌ | ❌ |
-| 2DGS               | ✅ | ❌ | ❌ | ❌ | ❌ |
-| Fast Gauss         | ❌ | ❓ | ❌ | ❌ | ❌ |
-| DiffGauss w/ Pose  | ✅ | ❌ | ❌ | ✅ | ❌ |
+| Inria 3DGS         | ✅ | ✖️ | ✖️ | ✖️ | ✖️ |
+| Faster-GS          | ✖️ | ✖️ | ✖️ | ✖️ | ✖️ |
+| ashawkey           | ✅ | ✅ | ✖️ | ✖️ | ✖️ |
+| Improved DiffRast  | ✅ | ✅ | ✖️ | ✖️ | ✖️ |
+| gsplat             | ✅ | ✅ | ✖️ | ✅ | ✅ |
+| slothfulxtx        | ✅ | ✅ | ✅ | ✖️ | ✖️ |
+| 2DGS               | ✅ | ✖️ | ✖️ | ✖️ | ✖️ |
+| Fast Gauss         | ✖️ | ? | ✖️ | ✖️ | ✖️ |
+| DiffGauss w/ Pose  | ✅ | ✖️ | ✖️ | ✅ | ✖️ |
 
 
 
