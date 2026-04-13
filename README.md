@@ -1,13 +1,14 @@
 # Awesome 3DGS Renderer
 Collection of differentiable 3DGS CUDA renderer with simple installation and usage examples.
 
-| Renderer | Depth | Alpha | Cam Extrinsics Grad | Batch Rendering |
-|---|---|---|---|---|
-| Inria 3DGS | ✅ | ❌ | ❌ | ❌ |
-| Faster-GS  | ❌ | ❌ | ❌ | ❌ |
-| ashawkey   | ✅ | ✅ | ❌ | ❌ |
-| Improved DiffRast   | ✅ | ✅ | ❌ | ❌ |
-| gsplat     | ✅ | ✅ | ✅ | ✅ |
+| Renderer | Depth | Alpha | Normal | Cam Extrinsics Grad | Batch Rendering |
+|---|---|---|---|---|---|
+| Inria 3DGS         | ✅ | ❌ | ❌ | ❌ | ❌ |
+| Faster-GS          | ❌ | ❌ | ❌ |❌ | ❌ |
+| ashawkey           | ✅ | ✅ | ❌ | ❌ | ❌ |
+| Improved DiffRast  | ✅ | ✅ | ❌ | ❌ | ❌ |
+| gsplat             | ✅ | ✅ | ❌ | ✅ | ✅ |
+| slothfulxtx        | ✅ | ✅ | ✅ | ❌ | ❌ |
 
 
 
@@ -16,7 +17,9 @@ Collection of differentiable 3DGS CUDA renderer with simple installation and usa
 | Inria 3DGS     | tbd | tbd |
 | Faster-GS      | tbd | tbd |
 | ashawkey       | tbd | tbd |
+| Improved DiffRast | tbd | tbd |
 | gsplat         | tbd | tbd |
+| slothfulxtx    | tbd | tbd |
 
 
 ## Inria 3DGS
@@ -208,6 +211,40 @@ rendered_image, rendered_depth, rendered_alpha, radii = rasterizer(
     scales = scales,
     rotations = rotations,
     cov3D_precomp = cov3D_precomp
+)
+```
+</details>
+
+
+## slothfulxtx
+
+Repo: https://github.com/slothfulxtx/diff-gaussian-rasterization
+
+<details>
+<summary>Installation</summary>
+    
+```
+git clone --recurse-submodules https://github.com/slothfulxtx/diff-gaussian-rasterization.git 
+cd diff-gaussian-rasterization
+python setup.py install
+```
+</details>
+<details>
+<summary>Usage</summary>
+
+```py
+from diff_gauss import GaussianRasterizationSettings, GaussianRasterizer
+
+rendered_image, rendered_depth, rendered_norm, rendered_alpha, radii, extra = rasterizer(
+    means3D = means3D,
+    means2D = means2D,
+    shs = shs,
+    colors_precomp = colors_precomp,
+    opacities = opacity,
+    scales = scales,
+    rotations = rotations,
+    cov3Ds_precomp = cov3D_precomp,
+    extra_attrs = extra_attrs
 )
 ```
 </details>
