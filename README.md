@@ -24,7 +24,7 @@ pip install diff-gaussian-rasterization --no-build-isolation
 <details>
 Usage:
     
-```
+```py
 from diff_gaussian_rasterization import GaussianRasterizationSettings, GaussianRasterizer
 
 raster_settings = GaussianRasterizationSettings(
@@ -97,8 +97,11 @@ Installation:
 git clone --recursive https://github.com/ashawkey/diff-gaussian-rasterization.git
 pip install diff-gaussian-rasterization --no-build-isolation
 ```
+
+<details>
+    
 Usage:
-```
+```py
 rendered_image, radii, rendered_depth, rendered_alpha = rasterizer(
     means3D=means3D,
     means2D=means2D,
@@ -110,6 +113,7 @@ rendered_image, radii, rendered_depth, rendered_alpha = rasterizer(
     cov3D_precomp=cov3D_precomp,
 )
 ```
+</details>
 
 ## gsplat
 
