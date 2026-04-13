@@ -4,19 +4,15 @@ Collection of differentiable 3DGS CUDA renderer with simple installation and usa
 | Renderer | Depth | Alpha | Normal | Cam Extrinsics Grad | Batch Rendering |
 |---|---|---|---|---|---|
 | Inria 3DGS         | ✅ | ❌ | ❌ | ❌ | ❌ |
-| Faster-GS          | ❌ | ❌ | ❌ |❌ | ❌ |
+| Faster-GS          | ❌ | ❌ | ❌ | ❌ | ❌ |
 | ashawkey           | ✅ | ✅ | ❌ | ❌ | ❌ |
 | Improved DiffRast  | ✅ | ✅ | ❌ | ❌ | ❌ |
 | gsplat             | ✅ | ✅ | ❌ | ✅ | ✅ |
 | slothfulxtx        | ✅ | ✅ | ✅ | ❌ | ❌ |
 | 2DGS               | ✅ | ❌ | ❌ | ❌ | ❌ |
 | Fast Gauss         | ❌ | ❓ | ❌ | ❌ | ❌ |
+| DiffGauss w/ Pose  | ✅ | ❌ | ❌ | ✅ | ❌ |
 
-
-
-| Renderer | Inference Speed | Training Speed |
-|---|---|---|
-| Inria 3DGS     | tbd | tbd |
 
 
 ## Inria 3DGS
@@ -288,7 +284,55 @@ Repo: https://github.com/hbb1/diff-surfel-rasterization/tree/main
 Installation:  
 ```
 git clone https://github.com/hbb1/diff-surfel-rasterization.git --recursive
-cd diff-surfel-tracing
-pip install .
+pip install diff-surfel-tracing
 ```
 
+
+## DiffGauss w/ Pose
+
+Repo: https://github.com/rmurai0610/diff-gaussian-rasterization-w-pose
+
+Installation:  
+```
+git clone https://github.com/rmurai0610/diff-gaussian-rasterization-w-pose --recursive
+pip install diff-gaussian-rasterization-w-pose
+```
+
+<details>
+<summary>Usage</summary>
+    
+```py
+from diff_gaussian_rasterization import GaussianRasterizationSettings, GaussianRasterizer
+
+raster_settings = GaussianRasterizationSettings(
+    image_height=int(viewpoint_camera.image_height),
+    image_width=int(viewpoint_camera.image_width),
+    tanfovx=tanfovx,
+    tanfovy=tanfovy,
+    bg=bg_color,
+    scale_modifier=scaling_modifier,
+    viewmatrix=viewpoint_camera.world_view_transform,
+    projmatrix=viewpoint_camera.full_proj_transform,
+    projmatrix_raw=viewpoint_camera.projection_matrix,
+    sh_degree=pc.active_sh_degree,
+    campos=viewpoint_camera.camera_center,
+    prefiltered=False,
+    debug=False,
+)
+
+rasterizer = GaussianRasterizer(raster_settings=raster_settings)
+
+rendered_image, radii, depth, opacity, n_touched = rasterizer(
+    means3D=means3D,
+    means2D=means2D,
+    shs=shs,
+    colors_precomp=colors_precomp,
+    opacities=opacity,
+    scales=scales,
+    rotations=rotations,
+    cov3D_precomp=cov3D_precomp,
+    theta=viewpoint_camera.cam_rot_delta,
+    rho=viewpoint_camera.cam_trans_delta,
+)
+```
+</details>
