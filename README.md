@@ -10,7 +10,7 @@ Collection of differentiable 3DGS CUDA renderer with simple installation and usa
 | gsplat             | ✅ | ✅ | ❌ | ✅ | ✅ |
 | slothfulxtx        | ✅ | ✅ | ✅ | ❌ | ❌ |
 | 2DGS               | ✅ | ❌ | ❌ | ❌ | ❌ |
-| Fast Gauss         | ❓ | ❌ | ❌ | ❌ | ❌ |
+| Fast Gauss         | ❌ | ❓ | ❌ | ❌ | ❌ |
 
 
 
