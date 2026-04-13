@@ -13,7 +13,10 @@ Overview:
 
 | Renderer | Inference Speed | Training Speed |
 |---|---|---|
-| Inria 3DGS | tbd | tbd |
+| Inria 3DGS     | tbd | tbd |
+| Faster-GS      | tbd | tbd |
+| ashawkey       | tbd | tbd |
+| gsplat         | tbd | tbd |
 
 
 ## Inria 3DGS
