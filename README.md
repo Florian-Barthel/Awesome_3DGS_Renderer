@@ -216,6 +216,53 @@ rendered_image, rendered_depth, rendered_alpha, radii = rasterizer(
 ```
 </details>
 
+## Fast Gauss
+
+Repo: https://github.com/dendenxu/fast-gaussian-rasterization
+
+<details>
+<summary>Installation</summary>
+    
+```
+pip install fast_gauss
+```
+</details>
+<details>
+<summary>Usage</summary>
+
+```py
+from fast_gauss import GaussianRasterizationSettings, GaussianRasterizer
+
+raster_settings = GaussianRasterizationSettings(
+    image_height=int(viewpoint_camera.image_height),
+    image_width=int(viewpoint_camera.image_width),
+    tanfovx=tanfovx,
+    tanfovy=tanfovy,
+    bg=bg_color,
+    scale_modifier=scaling_modifier,
+    viewmatrix=viewpoint_camera.world_view_transform,
+    projmatrix=viewpoint_camera.full_proj_transform,
+    sh_degree=pc.active_sh_degree,
+    campos=viewpoint_camera.camera_center,
+    prefiltered=False,
+    debug=pipe.debug,
+    antialiasing=pipe.antialiasing
+)
+rasterizer = GaussianRasterizer(raster_settings=raster_settings)
+
+rendered_image, radii, depth_image = rasterizer(
+    means3D = means3D,
+    means2D = means2D,
+    shs = shs,
+    colors_precomp = colors_precomp,
+    opacities = opacity,
+    scales = scales,
+    rotations = rotations,
+    cov3D_precomp = cov3D_precomp
+)
+```
+</details>
+
 
 ## slothfulxtx
 
