@@ -78,6 +78,42 @@ Installation:
 pip install git+https://github.com/nerficg-project/faster-gaussian-splatting/#subdirectory=FasterGSCudaBackend --no-build-isolation
 ```
 
+<details>
+    
+Usage:
+```py
+from FasterGSCudaBackend.torch_bindings import diff_rasterize, RasterizerSettings
+
+raster_settings = RasterizerSettings(
+    w2c=viewpoint_camera.world_view_transform.T.contiguous(),  # FasterGSCudaBackend uses row-major matrices
+    cam_position=viewpoint_camera.camera_center.contiguous(),
+    bg_color=bg_color.contiguous(),
+    active_sh_bases=(pc.active_sh_degree + 1) ** 2,
+    width=int(viewpoint_camera.image_width),
+    height=int(viewpoint_camera.image_height),
+    focal_x=1 / math.tan(viewpoint_camera.FoVx / 2) * (viewpoint_camera.image_width / 2),
+    focal_y=1 / math.tan(viewpoint_camera.FoVy / 2) * (viewpoint_camera.image_height / 2),
+    center_x=viewpoint_camera.image_width / 2,
+    center_y=viewpoint_camera.image_height / 2,
+    near_plane=0.2,
+    far_plane=10000.0,
+    proper_antialiasing=pipe.antialiasing,
+)
+
+rendered_image = diff_rasterize(
+    means=means,
+    scales=scales,
+    rotations=rotations,
+    opacities=opacities,
+    sh_coefficients_0=sh_coefficients_0,
+    sh_coefficients_rest=sh_coefficients_rest,
+    densification_info=densification_info,
+    rasterizer_settings=raster_settings,
+)
+
+```
+</details>
+
 ## ashawkey
 
 - ✅ CUDA
