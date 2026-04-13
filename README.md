@@ -85,7 +85,6 @@ pip install git+https://github.com/nerficg-project/faster-gaussian-splatting/#su
 <details>
 <summary>Usage</summary>
     
-Usage:
 ```py
 from FasterGSCudaBackend.torch_bindings import diff_rasterize, RasterizerSettings
 
