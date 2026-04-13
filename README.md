@@ -7,6 +7,7 @@ Overview:
 | Inria 3DGS | ✅ | ❌ | ❌ | ❌ |
 | Faster-GS  | ❌ | ❌ | ❌ | ❌ |
 | ashawkey   | ✅ | ✅ | ❌ | ❌ |
+| Improved DiffRast   | ✅ | ✅ | ❌ | ❌ |
 | gsplat     | ✅ | ✅ | ✅ | ✅ |
 
 
@@ -175,6 +176,39 @@ render_colors, render_alphas, info = rasterization(
     width=width,
     height=height,
     render_mode: "RGB",                       # ["RGB", "D", "ED", "RGB+D", "RGB+ED"]
+)
+```
+</details>
+
+## Improved DiffRast
+
+Repo: https://github.com/dendenxu/diff-gaussian-rasterization
+
+<details>
+<summary>Installation</summary>
+    
+```
+git clone --recursive https://github.com/dendenxu/diff-gaussian-rasterization.git
+pip install diff-gaussian-rasterization --no-build-isolation
+```
+</details>
+<details>
+<summary>Usage</summary>
+
+```py
+from diff_gauss import GaussianRasterizationSettings, GaussianRasterizer
+raster_settings = GaussianRasterizationSettings(...)
+rasterizer = GaussianRasterizer(raster_settings=raster_settings)
+
+rendered_image, rendered_depth, rendered_alpha, radii = rasterizer(
+    means3D = means3D,
+    means2D = means2D,
+    shs = shs,
+    colors_precomp = colors_precomp,
+    opacities = opacity,
+    scales = scales,
+    rotations = rotations,
+    cov3D_precomp = cov3D_precomp
 )
 ```
 </details>
