@@ -23,14 +23,12 @@ Collection of differentiable 3DGS CUDA renderer with simple installation and usa
 
 Repo: https://github.com/graphdeco-inria/diff-gaussian-rasterization/tree/main
 
-<details>
-<summary>Installation</summary>
-
+Installation:
 ```
-git clone --recursive https://github.com/graphdeco-inria/diff-gaussian-rasterization/tree/main
+git clone --recursive https://github.com/graphdeco-inria/diff-gaussian-rasterization
 pip install diff-gaussian-rasterization --no-build-isolation
 ```
-</details>
+
 
 <details>
 <summary>Usage</summary>
@@ -74,13 +72,11 @@ rendered_image, radii, depth_image = rasterizer(
 
 Repo: https://github.com/fhahlbohm/gaussian-splatting
 
-<details>
-<summary>Installation</summary>
-    
+Installation:
 ```
 pip install git+https://github.com/nerficg-project/faster-gaussian-splatting/#subdirectory=FasterGSCudaBackend --no-build-isolation
 ```
-</details>
+
 
 <details>
 <summary>Usage</summary>
@@ -122,14 +118,13 @@ rendered_image = diff_rasterize(
 
 Repo: https://github.com/ashawkey/diff-gaussian-rasterization
 
-<details>
-<summary>Installation</summary>
-    
+
+Installation: 
 ```
 git clone --recursive https://github.com/ashawkey/diff-gaussian-rasterization.git
 pip install diff-gaussian-rasterization --no-build-isolation
 ```
-</details>
+
 <details>
 <summary>Usage</summary>
     
@@ -151,13 +146,11 @@ rendered_image, radii, rendered_depth, rendered_alpha = rasterizer(
 
 Repo: https://github.com/fhahlbohm/gaussian-splatting
 
-<details>
-<summary>Installation</summary>
-    
+Installation
 ```
 pip install gsplat
 ```
-</details>
+
 <details>
 <summary>Usage</summary>
 
@@ -183,14 +176,12 @@ render_colors, render_alphas, info = rasterization(
 
 Repo: https://github.com/dendenxu/diff-gaussian-rasterization
 
-<details>
-<summary>Installation</summary>
-    
+Installation:
 ```
 git clone --recursive https://github.com/dendenxu/diff-gaussian-rasterization.git
 pip install diff-gaussian-rasterization --no-build-isolation
 ```
-</details>
+
 <details>
 <summary>Usage</summary>
 
@@ -216,13 +207,11 @@ rendered_image, rendered_depth, rendered_alpha, radii = rasterizer(
 
 Repo: https://github.com/dendenxu/fast-gaussian-rasterization
 
-<details>
-<summary>Installation</summary>
-    
+Installation:
 ```
 pip install fast_gauss
 ```
-</details>
+
 <details>
 <summary>Usage</summary>
 
@@ -264,15 +253,13 @@ rendered_image, alpha_image = rasterizer(
 
 Repo: https://github.com/slothfulxtx/diff-gaussian-rasterization
 
-<details>
-<summary>Installation</summary>
-    
+Installation:
 ```
 git clone --recurse-submodules https://github.com/slothfulxtx/diff-gaussian-rasterization.git 
 cd diff-gaussian-rasterization
 python setup.py install
 ```
-</details>
+
 <details>
 <summary>Usage</summary>
 
@@ -298,13 +285,10 @@ rendered_image, rendered_depth, rendered_norm, rendered_alpha, radii, extra = ra
 
 Repo: https://github.com/hbb1/diff-surfel-rasterization/tree/main
 
-<details>
-<summary>Installation</summary>
-    
+Installation:  
 ```
 git clone https://github.com/hbb1/diff-surfel-rasterization.git --recursive
 cd diff-surfel-tracing
 pip install .
 ```
-</details>
 
