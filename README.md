@@ -10,6 +10,7 @@ Collection of differentiable 3DGS CUDA renderer with simple installation and usa
 | gsplat             | ✅ | ✅ | ❌ | ✅ | ✅ |
 | slothfulxtx        | ✅ | ✅ | ✅ | ❌ | ❌ |
 | 2DGS               | ✅ | ❌ | ❌ | ❌ | ❌ |
+| Fast Gauss         | ❓ | ❌ | ❌ | ❌ | ❌ |
 
 
 
@@ -250,7 +251,7 @@ raster_settings = GaussianRasterizationSettings(
 )
 rasterizer = GaussianRasterizer(raster_settings=raster_settings)
 
-rendered_image, radii, depth_image = rasterizer(
+rendered_image, alpha_image = rasterizer(
     means3D = means3D,
     means2D = means2D,
     shs = shs,
