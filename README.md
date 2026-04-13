@@ -3,7 +3,7 @@ Collection of differentiable 3DGS CUDA renderer with simple installation and usa
 
 Overview:
 | Renderer | Depth | Alpha | Extrinsics Gradient | Batch Rendering |
-|---|---|---|---|---|---|---|
+|---|---|---|---|---|
 | Inria 3DGS | ✅ | ❌ | ❌ | ❌ |
 | Faster-GS  | ❌ | ❌ | ❌ | ❌ |
 | ashawkey   | ✅ | ✅ | ❌ | ❌ |
