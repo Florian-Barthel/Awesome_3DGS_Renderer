@@ -1,8 +1,7 @@
 # Awesome 3DGS Renderer
 Collection of differentiable 3DGS CUDA renderer with simple installation and usage examples.
 
-Overview:
-| Renderer | Depth | Alpha | Extrinsics Gradient | Batch Rendering |
+| Renderer | Depth | Alpha | Cam Extrinsics Grad | Batch Rendering |
 |---|---|---|---|---|
 | Inria 3DGS | ✅ | ❌ | ❌ | ❌ |
 | Faster-GS  | ❌ | ❌ | ❌ | ❌ |
